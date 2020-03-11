@@ -1,23 +1,19 @@
-const { name, random } = require('faker');
+const { name, random } = require("faker");
 const { firstName, lastName } = name;
 const { uuid, boolean } = random;
 const myStudents = [
-  'Nikas Morozov',
-  'Dominykas Brazauskas',
-  'Arvydas Mickus',
-  'Artūras Bortkevičius',
-  'Gytis Juozėnas',
-  'Raimedas Simutis',
-  'Paulius Sviackevičius',
-  'Dmitrij Borovik',
-  'Karolis Šulcas',
-  'Kęstutis Bilinskas',
-  'Odeta Budrytė',
-  'Andrėjus Chomičenka',
-  'Toma Juknaitė',
-  'Simona Miniotaitė',
-  'Skirmantė Klimčiukaitė',
-  'Kęstutis Totoraitis',
+  "Erikas",
+  "Milda",
+  "Živilė",
+  "Benjamin",
+  "Džiugas",
+  "Gediminas",
+  "Grantas",
+  "Iveta",
+  "Karolis",
+  "Lukas",
+  "Radvilė",
+  "Robertas"
 ];
 
 const generatePartyGuests = key => {
@@ -30,7 +26,7 @@ const generatePartyGuests = key => {
       name: insertStudent ? myStudents[i / 10 - 1] : fullName,
       id: uuid(),
       [key]: insertStudent || boolean(),
-      attending: insertStudent || boolean(),
+      attending: insertStudent || boolean()
     };
   });
 
